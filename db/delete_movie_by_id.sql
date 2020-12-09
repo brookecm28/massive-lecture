@@ -1,1 +1,1 @@
-DELETE FROM movies WHERE id = $1
+DELETE FROM movies WHERE id = $1;

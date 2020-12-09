@@ -4,7 +4,7 @@ const app = express()
 const massive = require('massive')
 const movieCtrl = require('./movieController')
 
-const { SERVER_PORT, CONNECTION_STRING } = process.env
+const {SERVER_PORT, CONNECTION_STRING} = process.env
 
 app.use(express.json())
 
@@ -19,8 +19,9 @@ massive({
   ssl: {
     rejectUnauthorized: false,
   },
-}).then((dbInstance) => {
+}).then(dbInstance => {
   console.log('DB Ready')
   app.set('db', dbInstance)
   app.listen(SERVER_PORT, () => console.log(`Running on port ${SERVER_PORT}`))
 })
+ 

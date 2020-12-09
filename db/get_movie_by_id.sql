@@ -1,1 +1,2 @@
-SELECT * FROM movies WHERE id = $1
+SELECT * FROM movies
+WHERE id = $1;
